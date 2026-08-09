@@ -1,0 +1,22 @@
+# 1. Related to copyrightW
+
+# 2. Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# 3. Django
+*.log
+db.sqlite3
+staticfiles/
+media/
+
+# 4. 환경 변수
+.env
+
+# 5. 에디터·OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

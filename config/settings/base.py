@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    "library",
 ]
 
 MIDDLEWARE = [
@@ -76,12 +78,14 @@ ASGI_APPLICATION = "config.asgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": get_env("DB_NAME", "haedal_rental"),
-        "USER": get_env("DB_USER", "postgres"),
-        "PASSWORD": get_env("DB_PASSWORD", ""),
-        "HOST": get_env("DB_HOST", "localhost"),
-        "PORT": get_env("DB_PORT", "5432"),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        # "ENGINE": "django.db.backends.postgresql",
+        # "NAME": get_env("DB_NAME", "haedal_rental"),
+        # "USER": get_env("DB_USER", "postgres"),
+        # "PASSWORD": get_env("DB_PASSWORD", ""),
+        # "HOST": get_env("DB_HOST", "localhost"),
+        # "PORT": get_env("DB_PORT", "5432"),
     }
 }
 

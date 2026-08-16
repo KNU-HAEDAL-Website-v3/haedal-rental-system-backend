@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>도서 목록</title>
+</head>
+
+<body>
+
+<h1>도서 목록</h1>
+
+{% for book in books %}
+
+    <div>
+        <h2>
+            <a href="{% url 'book_detail' book.book_id %}">
+                {{ book.name }}
+            </a>
+        </h2>
+
+        <p>저자: {{ book.author }}</p>
+        <p>출판사: {{ book.publisher }}</p>
+    </div>
+
+{% empty %}
+
+    <p>등록된 도서가 없습니다.</p>
+
+{% endfor %}
+
+</body>
+</html>
